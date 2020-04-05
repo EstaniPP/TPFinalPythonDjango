@@ -6,8 +6,8 @@ def saludo(request):
 
 def signup(request):
     if request.method=="POST":
-        message = "" + request.POST["text"] + "" + request.POST["email"] + "" + request.POST["tel"] +  "" + request.POST["pass"]
-        subject= "Registrado exitosamente"
+        message = "Usuario: " + request.POST["text"] + " Email: " + request.POST["email"] + " Telefono registrado: " + request.POST["tel"] +  " ContraseĂ±a: " + request.POST["pass"]
+        subject= "Registrado exitosamente en TP-FINAL-TALLERPYTHON"
         emailfrom= settings.EMAIL_HOST_USER
         recipient_list=[request.POST["email"]]
 
